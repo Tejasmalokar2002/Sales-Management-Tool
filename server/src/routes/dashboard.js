@@ -2,7 +2,7 @@ const express = require('express');
 const Invoice = require('../models/Invoice');
 const Product = require('../models/Product');
 const Customer = require('../models/Customer');
-const ProductType = require('../models/ProductType');
+const ProductType = require('../models/productType');
 const { authenticate } = require('../middleware/auth');
 
 const router = express.Router();
