@@ -60,7 +60,7 @@ const LoginPage = () => {
     try {
       if (isLogin) {
         // Login logic
-        const res = await axios.post('http://localhost:5000/api/auth/login', {
+        const res = await axios.post('https://sales-management-tool.onrender.com/api/auth/login', {
           email: formData.email,
           password: formData.password
         });
@@ -68,7 +68,7 @@ const LoginPage = () => {
         navigate('/');
       } else {
         // Register logic
-        const res = await axios.post('http://localhost:5000/api/auth/register', {
+        const res = await axios.post('https://sales-management-tool.onrender.com/api/auth/register', {
           name: formData.name,
           email: formData.email,
           password: formData.password,
@@ -76,7 +76,7 @@ const LoginPage = () => {
         });
         
         // Auto-login after registration
-        const loginRes = await axios.post('http://localhost:5000/api/auth/login', {
+        const loginRes = await axios.post('https://sales-management-tool.onrender.com/api/auth/login', {
           email: formData.email,
           password: formData.password
         });
